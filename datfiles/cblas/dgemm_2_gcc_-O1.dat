@@ -1,0 +1,2 @@
+     title             KiB             MiB             GiB          n          r             min             max            mean                 stddev (%)      MiB/s
+     CBLAS          84.375           0.082           0.000         60         35       13919.771       15629.314       13990.498         295.047 (2.109 %)   1963.177
