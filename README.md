@@ -63,7 +63,7 @@ In this repository you can find information about benchmarks based on different 
     ├── clang
     ├── clang_-03
     ├── clang_-O1
-    ├── clang_-O2
+    ├── clang_-O2 
     ├── clang_-O3
     ├── clang_-Ofast
     ├── gcc
