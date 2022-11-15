@@ -48,6 +48,8 @@ int main(int argc, char **argv)
 	 "n", "r", "d", "min", "max", "mean", "stddev (%)", "MiB/s");
   
   run_benchmark("BASE",   reduc_base, n, r);
+  run_benchmark("reduc_unroll4",   reduc_unroll4, n, r);
+  run_benchmark("redc_unroll8",   reduc_unroll8, n, r);
   
   //
   return 0;
