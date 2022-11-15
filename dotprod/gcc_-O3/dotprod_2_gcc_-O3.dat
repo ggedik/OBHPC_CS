@@ -1,0 +1,2 @@
+     title             KiB             MiB             GiB          n          r               d             min             max            mean                 stddev (%)      MiB/s
+dotprod_unroll4           0.938           0.001           0.000         60         35       11329.089         229.857         231.086         230.509           0.377 (0.164 %)   1985.881

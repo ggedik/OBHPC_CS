@@ -1,0 +1,2 @@
+     title             KiB             MiB             GiB          n          r               d             min             max            mean                 stddev (%)      MiB/s
+reduc_unroll4           0.938           0.001           0.000         60         35         940.757         221.086         222.971         221.826           0.466 (0.210 %)   2063.616
