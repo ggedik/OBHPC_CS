@@ -9,9 +9,11 @@ The reduc, dgemm and dotprod files in this repository are given as you'd obtain 
 
 
 -Additionnaly, 
--./cible : contains information about the target arhitecture.
--./datfiles : contains all .dat files produced when I run the script. 
--./grphs : contains all the graphs that I produced, they will be explained in detail in the report. 
+-'./cible' : contains information about the target arhitecture.
+
+-'./datfiles' : contains all .dat files produced when I run the script. 
+
+-'./grphs' : contains all the graphs that I produced, they will be explained in detail in the report. 
 
 
 
