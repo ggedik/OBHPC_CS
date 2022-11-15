@@ -27,12 +27,7 @@ plot 'dgemm_60x35_clang_-O1.dat' using 13:xtic(1) ti "-O1",
 plot 'dgemm_60x35_clang_-O2.dat' using 13:xtic(1) ti "-O2",
 plot 'dgemm_60x35_clang_-O3.dat' using 13:xtic(1) ti "-O3",
 
-## gcc 
-#set title 'GCC with different matrix multiplication methods and different optimization flags'
-#plot 'dgemm_60x35_gcc_-Ofast.dat' using 13:xtic(1) ti "-Ofast" lc rgb '#4dbeee' # light-blue,
-#plot 'dgemm_60x35_gcc_-O1.dat' using 13:xtic(1) ti "-O1" lc rgb '#4dbeee' # light-blue,
-#plot 'dgemm_60x35_gcc_-O2.dat' using 13:xtic(1) ti "-O2" lc rgb '#4dbeee' # light-blue,
-#plot 'dgemm_60x35_gcc_-O3.dat' using 13:xtic(1) ti "-O3" lc rgb '#4dbeee' # light-blue,
+
 
 #replot
 unset multiplot

@@ -21,22 +21,14 @@ set xtics   ()
 set xrange [ * : * ] 
 set yrange [ * : * ] 
 
-#set multiplot layout 3,1 rowsfirst 
 set ylabel "bandwidth in MiB/s"
 set xlabel "different flags"
-## Last datafile plotted: "32x32clang.dat"
-set title 'GCC with different matrix multiplication methods and different optimization flags'
+
 ##  gcc
+set title 'GCC with different matrix multiplication methods and different optimization flags'
 plot 'dgemm_60x35_clang_-Ofast.dat' using 13:xtic(1) ti "-Ofast",'dgemm_60x35_clang_-O1.dat' using 13:xtic(1) ti "-O1",'dgemm_60x35_clang_-O2.dat' using 13:xtic(1) ti "-O2",'dgemm_60x35_clang_-O3.dat' using 13:xtic(1) ti "-O3",
-#'32x32_clang_reduc.dat' using 13:xtic(1) ti "clang" WHYT NO VALID POINTS OFFF
+
  
-#'/../reduc/32x32_gcc.dat' using  , \
 
-## clang 
-#set title 'Clang with different matrix multiplication methods and different optimization flags'
-#plot '32x32_clang.dat' using 13:xtic(1) ti "clang" lc rgb '#B3CDE3'
-
-#set title 'Gcc with different metjods of matrix multiplication'
-#plot '32x32_gcc.dat' using 13:xtic(1) ti "gcc" lc rgb '#B3CDE3'
 replot
-#unset multiplot
+

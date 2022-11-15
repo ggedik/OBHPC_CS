@@ -20,48 +20,44 @@ set xrange [ * : * ]
 set yrange [ * : 12000 ] 
 
 set ylabel "bandwidth in MiB/s"
-set xlabel "different flags"
+set xlabel "different methods"
 
 set multiplot layout 2,2 rowsfirst
 
 set title 'Gcc vs Clang with optimization flag O1 for all methods'
-plot newhistogram, 'dgemm_60x35_gcc_-O1.dat' using 13:xtic(1) ti "-O1", \
-newhistogram, 'reduc_60x35_gcc_-O1.dat' using 14:xticlabels("REDUC") ti "-O1",  \
- newhistogram,'dotprod_60x35_clang_-O1.dat' using 14:xtic("DOTPROD") ti "-O1",    \
-newhistogram, 'dgemm_60x35_clang_-O1.dat' using 13:xtic(1) ti "-O1", \
-newhistogram, 'reduc_60x35_clang_-O1.dat' using 14:xticlabels("REDUC") ti "-O1",  \
- newhistogram,'dotprod_60x35_clang_-O1.dat' using 14:xtic("DOTPROD") ti "-O1",    \
+plot newhistogram, 'dgemm_60x35_gcc_-O1.dat' using 13:xtic(1) ti "gcc", \
+     'dgemm_60x35_clang_-O1.dat' using 13:xtic(1) ti "clang", \
+newhistogram, 'reduc_60x35_gcc_-O1.dat' using 14:xtic(1) ti "reduc: gcc",  \
+     'reduc_60x35_clang_-O1.dat' using 14:xtic(1) ti "reduc clang",  \
+newhistogram,'dotprod_60x35_gcc_-O1.dat' using 14:xtic(1) ti "dotprod: gcc",    \
+    'dotprod_60x35_clang_-O1.dat' using 14:xtic(1) ti "dotprod: clang",    \
 
 set title 'Gcc vs Clang with optimization flag O2 for all methods'
-plot newhistogram,'dgemm_60x35_gcc_-O2.dat' using 13:xtic(1) ti "-O2",  \
-newhistogram,'reduc_60x35_gcc_-O2.dat' using 14:xticlabels("REDUC")  ti "-O2",   \
-newhistogram,'dotprod_60x35_gcc_-O2.dat' using 14:xtic("DOTPROD") ti "-O2", \
- newhistogram,'dotprod_60x35_clang_-O2.dat' using 14:xtic("DOTPROD") ti "-O2",    \
-newhistogram, 'dgemm_60x35_clang_-O2.dat' using 13:xtic(1) ti "-O2", \
-newhistogram, 'reduc_60x35_clang_-O2.dat' using 14:xticlabels("REDUC") ti "-O2",  \
- newhistogram,'dotprod_60x35_clang_-O2.dat' using 14:xtic("DOTPROD") ti "-O2",    \
+plot newhistogram,'dgemm_60x35_gcc_-O2.dat' using 13:xtic(1) ti "gcc",  \
+    'dgemm_60x35_clang_-O2.dat' using 13:xtic(1) ti "clang", \
+newhistogram,'reduc_60x35_gcc_-O2.dat' using 14:xtic(1)  ti "reduc: gcc",   \
+'reduc_60x35_clang_-O2.dat' using 14:xtic(1) ti "clang",  \
+newhistogram,'dotprod_60x35_gcc_-O2.dat' using 14:xtic(1) ti "dotprod: gcc", \
+'dotprod_60x35_clang_-O2.dat' using 14:xtic(1) ti "clang",    \
 
-set title 'Gcc with optimization flag O3 for all methods'
-plot newhistogram,'dgemm_60x35_gcc_-O3.dat' using 13:xtic(1) ti "-O3",  \
-newhistogram,'reduc_60x35_gcc_-O3.dat' using 14:xticlabels("REDUC")  ti "-O3",   \
-newhistogram,'dotprod_60x35_gcc_-O3.dat' using 14:xtic("DOTPROD") ti "-O3", \
- newhistogram,'dotprod_60x35_clang_-O3.dat' using 14:xtic("DOTPROD") ti "-O3",    \
-newhistogram, 'dgemm_60x35_clang_-O3.dat' using 13:xtic(1) ti "-O3", \
-newhistogram, 'reduc_60x35_clang_-O3.dat' using 14:xticlabels("REDUC") ti "-O3",  \
- newhistogram,'dotprod_60x35_clang_-O3.dat' using 14:xtic("DOTPROD") ti "-O3",    \
+set title 'Gcc vs Clang with optimization flag O3 for all methods'
+plot newhistogram,'dgemm_60x35_gcc_-O3.dat' using 13:xtic(1) ti "gcc",  \
+'dgemm_60x35_clang_-O3.dat' using 13:xtic(1) ti "clang", \
+newhistogram,'reduc_60x35_gcc_-O3.dat' using 14:xtic(1) ti "reduc: gcc",   \
+'reduc_60x35_clang_-O3.dat' using 14:xtic(1) ti "clang",  \
+newhistogram,'dotprod_60x35_gcc_-O3.dat' using 14:xtic(1) ti "gcc", \
+'dotprod_60x35_clang_-O3.dat' using 14:xtic(1) ti "dotprod: clang",    \
 
-set title 'Gcc with optimization flag Ofast for all methods'
-plot newhistogram,'dgemm_60x35_gcc_-Ofast.dat' using 13:xtic(1) ti "-Ofast",    \
- newhistogram,'reduc_60x35_gcc_-Ofast.dat' using 14:xticlabels("REDUC") ti "-Ofast",   \
- newhistogram,'dotprod_60x35_gcc_-Ofast.dat' using 14:xtic("DOTPROD") ti "-Ofast", \
- newhistogram,'dotprod_60x35_clang_-Ofast.dat' using 14:xtic("DOTPROD") ti "-Ofast",    \
-newhistogram, 'dgemm_60x35_clang_-Ofast.dat' using 13:xtic(1) ti "-Ofast", \
-newhistogram, 'reduc_60x35_clang_-Ofast.dat' using 14:xticlabels("REDUC") ti "-Ofast",  \
- newhistogram,'dotprod_60x35_clang_-Ofast.dat' using 14:xtic("DOTPROD") ti "-Ofast",    \
+set title 'Gcc vs Clang  with optimization flag Ofast for all methods'
+plot newhistogram,'dgemm_60x35_gcc_-Ofast.dat' using 13:xtic(1) ti "gcc",    \
+'dgemm_60x35_clang_-Ofast.dat' using 13:xtic(1) ti "clang", \
+ newhistogram,'reduc_60x35_gcc_-Ofast.dat' using 14:xtic(1) ti "reduc: gcc",   \
+'reduc_60x35_clang_-Ofast.dat' using 14:xtic(1) ti "clang",  \
+ newhistogram,'dotprod_60x35_gcc_-Ofast.dat' using 14:xtic(1) ti "dotprod: gcc", \
+'dotprod_60x35_clang_-Ofast.dat' using 14:xtic(1) ti "clang",    \
 
-## clang
 
-## gcc vs clang
+
 
 
 #replot
